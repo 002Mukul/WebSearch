@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+import requests
+
+h = "https://cb79c70yyyyyb.interact.sh"
+hd = {'User-Agent': 'LOL', 'lol': 'kiki'}
+r = requests.get(h, headers=hd, timeout=10)
+print(r.status_code)

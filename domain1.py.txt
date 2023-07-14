@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import os
+import argparse
+parser = argparse.ArgumentParser(description="Archive data collector")
+parser.add_argument("-f", type=str, help="filename", required=True)
+
+file = parser.parse_args()
+
+f = open("{}".format(file.f), "r")
+target = f.readlines()
+for i in target:
+	os.system("waybackurls {}".format(i))
+	print("Done with", i)

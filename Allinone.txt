@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+import requests
+
+h = "http://api.tidepool.org"
+i = requests.options(h, headers=header)
+print(i.status_code)
+print(i.headers)
+print(i.text)
+

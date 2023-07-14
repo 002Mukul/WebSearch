@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+import re
+
+url = """https://cdac.in/index.jsp?p=data
+        https://drop.com/data.action?url=localhost
+        ftp://localhost.localdomain"""
+
+# collect the correct match
+collect = re.findall(r"ftp.*", url)  #[r: Raw string] [url : where you want to match]
+for i in collect:
+    print (i)
