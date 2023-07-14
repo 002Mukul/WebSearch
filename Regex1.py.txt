@@ -1,0 +1,8 @@
+import re
+
+url = """https://cdac.in/index.jsp?p=data
+        https://drop.com/data.action?url=localhost
+        ftp://localhost.localdomain"""
+collect = re.search(r"cdac", url)
+for i in collect:
+    print (i)

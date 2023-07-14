@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+from requests_html import HTMLSession
+session = HTMLSession()
+r = session.get('https://tesla.com')
+data = r.html.links
+for i in data:
+    print(i)

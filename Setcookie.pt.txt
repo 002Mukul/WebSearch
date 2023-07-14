@@ -1,0 +1,9 @@
+Setup cookies:
+--------------
+#!/usr/bin/python3
+import requests
+
+h = "http://f0d4-49-36-239-138.ngrok.io"
+header = {'Set-Cookies': 'LOL'}
+r = requests.get(h, headers=header)
+print(r)
