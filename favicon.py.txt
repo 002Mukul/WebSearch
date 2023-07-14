@@ -1,0 +1,7 @@
+# pip3 install requests
+
+#!/usr/bin/python3
+import requests
+d = requests.get('https://www.misrii.com/favicon.ico')
+with open("favicon.ico", "wb") as f:
+        f.write(d.content)

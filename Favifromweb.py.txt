@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import requests, mmh3, codecs
+d = requests.get('https://www.misrii.com/favicon.ico')
+with open("favicon.ico", "wb") as f:
+        f.write(d.content)
+
+data = open("favicon.ico", 'rb').read()
+hash = mmh3.hash(codecs.encode(data,"base64"))
+print(hash)
